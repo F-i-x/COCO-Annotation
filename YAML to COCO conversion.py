@@ -88,7 +88,7 @@ if __name__ == '__main__':
 
 
     yaml_file_path = 'annotations/objects/*.yaml'
-    #files = glob.glob("C:/Users/insshas/OneDrive - Vanderlande/ANNOTATED IMAGES/ImageSelector/saved_images/00042/annotations/objects/*.yaml")
+    #files = glob.glob("C:/path to multiple yaml files for an image/*.yaml")
     files = glob.glob(os.path.join(args.source_path,yaml_file_path))
     #print(files)
     file1 = os.path.join(args.source_path,'data.yaml')
@@ -104,7 +104,7 @@ if __name__ == '__main__':
     json_dict = {"info":[],"licenses":[],"images":[],"categories":[],"annotations":[]}
     categories = {"id": 1, "name": "item", "supercategory": ""}
     #da1 = yaml.load(open(file1))
-#with open("C:/Users/insshas/OneDrive - Vanderlande/ANNOTATED IMAGES/ImageSelector/saved_images/00042/data.yaml", 'r') as stream:
+#with open("C:/path to common data file/data.yaml", 'r') as stream:
     with open(file1, 'r') as stream:
         datamap = yaml.load(stream)
     image_data=datamap['webotate']
